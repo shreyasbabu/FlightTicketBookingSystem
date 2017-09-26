@@ -1,4 +1,4 @@
-package DAO;
+package main.java.com.dao;
 
 import java.util.List;
 
