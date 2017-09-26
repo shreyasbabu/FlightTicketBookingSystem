@@ -1,0 +1,1 @@
+All spring and hibernate libraries
