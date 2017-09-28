@@ -1,14 +1,15 @@
-package DAO;
+package com.dao;
 
 import java.util.List;
 
-import model.FareMaster;
+import com.model.FareMaster;
 
 public interface FareMasterDAO {
 	
-	public void newFare(FareMaster fareMaster);
-	public void modifyFare(FareMaster fareMaster);
-	public void deleteFare(int fareId);
+	public boolean newFare(FareMaster fareMaster);
+	public boolean modifyFare(FareMaster fareMaster);
+	public boolean deleteFare(int fareId);
 	public FareMaster getFare(int fareMasterId);
 	public List<FareMaster> getAllFareList();
+
 }

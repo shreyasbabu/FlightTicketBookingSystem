@@ -1,12 +1,12 @@
-package DAO;
-import model.*;
-
+package com.dao;
 import java.util.List;
+
+import com.model.*;
 public interface AddressDetailsDAO {
 	
-	public void modifyAddress(AddressDetail addressDetail);
-	public void addNewAddress(AddressDetail addressDetail);
-	public List<AddressDetail> getAddressList();
-	public void deleteAddress(int addressId);
-
+	
+	public boolean modifyAddress(AddressDetail addressDetail);
+	public boolean addNewAddress(AddressDetail addressDetail);
+	public List<AddressDetail> getAddressList(int personId);
+	public boolean deleteAddress(int addressId);
 }

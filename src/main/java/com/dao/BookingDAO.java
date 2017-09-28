@@ -1,12 +1,14 @@
-package DAO;
+package com.dao;
 
 import java.util.List;
-import model.Booking;
+
+import com.model.Booking;
+import com.model.Person;
 
 public interface BookingDAO {
 	
-	public void newBooking(Booking booking);
-	public boolean checkAvailability(int flightId,int seatRequired);
-	public List<Booking> getBookingHistory(int personId);
+	public boolean newBooking(Booking booking);
+	public List<Booking> getBookedDetails(int personId);
+	public boolean deleteBooking(int bookingId);
 
 }

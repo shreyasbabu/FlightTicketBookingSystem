@@ -1,14 +1,14 @@
-package main.java.com.dao;
+package com.dao;
 
 import java.util.List;
 
-import model.FleetMaster;
+import com.model.FleetMaster;
 
 public interface FleetMasterDAO {
-	
-	public void createFleet(FleetMaster fleetMaster);
-	public void modifyFleet(FleetMaster fleetMaster);
-	public void deleteFleet(int fleetId);
+
+	public boolean createFleet(FleetMaster fleetMaster);
+	public boolean modifyFleet(FleetMaster fleetMaster);
+	public boolean deleteFleet(int fleetId);
 	public FleetMaster getFleet(int fleetId);
 	public List<FleetMaster> getAllFleet();
 }

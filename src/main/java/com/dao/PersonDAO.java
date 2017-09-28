@@ -1,13 +1,13 @@
-package DAO;
+package com.dao;
 
-import model.Person;
+import com.model.Person;
 
 public interface PersonDAO {
 	
-	public void addPerson(Person person);
-	public void modifyPersonDetails(Person person);
-	public boolean checkLogin(String userName,String password);
-	public boolean checkUser(String emailAddress);
-	public void deletePerson(String emailAddress);
+
+	public boolean addPerson(Person person);
+	public boolean modifyPersonDetails(Person person);
+	public Person getUser(String emailAddress);
+	public boolean deletePerson(String emailAddress);
 
 }
