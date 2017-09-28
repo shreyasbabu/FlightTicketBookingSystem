@@ -1,8 +1,9 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 
 
@@ -20,11 +21,15 @@ public class FlightMaster implements Serializable {
 	@Column(name="FLIGHT_ID")
 	private int flightId;
 
-	@Column(name="arrival_time")
+	@Column(name="ARRIVAL_TIME")
 	private Time arrivalTime;
 
-	@Column(name="departure_time")
+	@Column(name="DEPARTURE_TIME")
 	private Time departureTime;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="FLIGHT_TRAVEL_DATE")
+	private Date flightTravelDate;
 
 	@Column(name="REMAINING_BUSINESS_SEATS")
 	private int remainingBusinessSeats;
@@ -84,6 +89,14 @@ public class FlightMaster implements Serializable {
 
 	public void setDepartureTime(Time departureTime) {
 		this.departureTime = departureTime;
+	}
+
+	public Date getFlightTravelDate() {
+		return this.flightTravelDate;
+	}
+
+	public void setFlightTravelDate(Date flightTravelDate) {
+		this.flightTravelDate = flightTravelDate;
 	}
 
 	public int getRemainingBusinessSeats() {

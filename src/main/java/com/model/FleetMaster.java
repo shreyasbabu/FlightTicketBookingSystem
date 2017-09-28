@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -19,10 +19,8 @@ public class FleetMaster implements Serializable {
 	@Column(name="FLEET_MASTER_ID")
 	private int fleetMasterId;
 
-	@Column(name="CODE_")
 	private String code;
 
-	@Column(name="MODEL_")
 	private String model;
 
 	@Column(name="TOTAL_BUSINESS_SEATS")

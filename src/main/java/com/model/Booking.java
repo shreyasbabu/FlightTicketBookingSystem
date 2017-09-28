@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -25,6 +25,12 @@ public class Booking implements Serializable {
 
 	@Column(name="BOOKING_NUMBER")
 	private String bookingNumber;
+
+	@Column(name="SEAT_CLASS")
+	private String seatClass;
+
+	@Column(name="SEATS_BOOKED")
+	private int seatsBooked;
 
 	@Column(name="TOTAL_COST")
 	private int totalCost;
@@ -72,6 +78,22 @@ public class Booking implements Serializable {
 
 	public void setBookingNumber(String bookingNumber) {
 		this.bookingNumber = bookingNumber;
+	}
+
+	public String getSeatClass() {
+		return this.seatClass;
+	}
+
+	public void setSeatClass(String seatClass) {
+		this.seatClass = seatClass;
+	}
+
+	public int getSeatsBooked() {
+		return this.seatsBooked;
+	}
+
+	public void setSeatsBooked(int seatsBooked) {
+		this.seatsBooked = seatsBooked;
 	}
 
 	public int getTotalCost() {

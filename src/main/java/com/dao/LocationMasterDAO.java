@@ -1,15 +1,15 @@
-package DAO;
+package com.dao;
 
 import java.util.List;
 
-import model.LocationMaster;
+import com.model.LocationMaster;
 
 public interface LocationMasterDAO {
 	
-	public void createLocation(LocationMaster locationMaster);
-	public void updateLocation(LocationMaster locationMaster);
-	public void deleteLocation(int locationId);
+	public boolean createLocation(LocationMaster locationMaster);
+	public boolean updateLocation(LocationMaster locationMaster);
+	public boolean deleteLocation(int locationId);
 	public LocationMaster getLocation(int locationMasterId);
 	public List<LocationMaster> getAllLocation();
-	
+
 }

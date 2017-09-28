@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -17,8 +17,12 @@ public class Passenger implements Serializable {
 	@Column(name="PASSENGER_ID")
 	private int passengerId;
 
+	private int age;
+
 	@Column(name="FIRST_NAME")
 	private String firstName;
+
+	private String gender;
 
 	@Column(name="LAST_NAME")
 	private String lastName;
@@ -29,7 +33,7 @@ public class Passenger implements Serializable {
 	@Column(name="MIDDLE_NAME")
 	private String middleName;
 
-	@Column(name="passenger_type")
+	@Column(name="PASSENGER_TYPE")
 	private String passengerType;
 
 	@Column(name="PASSPORT_NUMBER")
@@ -51,12 +55,28 @@ public class Passenger implements Serializable {
 		this.passengerId = passengerId;
 	}
 
+	public int getAge() {
+		return this.age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	public String getFirstName() {
 		return this.firstName;
 	}
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+
+	public String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getLastName() {

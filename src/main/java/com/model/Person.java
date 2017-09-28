@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -39,7 +39,7 @@ public class Person implements Serializable {
 	private String middleName;
 
 	@Column(name="MOBILE_NUMBER")
-	private BigInteger mobileNumber;
+	private long mobileNumber;
 
 	@Column(name="PASSPORT_NUMBER")
 	private String passportNumber;
@@ -49,13 +49,7 @@ public class Person implements Serializable {
 
 	private String title;
 
-	//bi-directional many-to-one association to AddressDetail
-	@OneToMany(mappedBy="person")
-	private List<AddressDetail> addressDetails;
 
-	//bi-directional many-to-one association to Booking
-	@OneToMany(mappedBy="person")
-	private List<Booking> bookings;
 
 	public Person() {
 	}
@@ -116,11 +110,11 @@ public class Person implements Serializable {
 		this.middleName = middleName;
 	}
 
-	public BigInteger getMobileNumber() {
+	public long getMobileNumber() {
 		return this.mobileNumber;
 	}
 
-	public void setMobileNumber(BigInteger mobileNumber) {
+	public void setMobileNumber(long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
@@ -148,48 +142,6 @@ public class Person implements Serializable {
 		this.title = title;
 	}
 
-	public List<AddressDetail> getAddressDetails() {
-		return this.addressDetails;
-	}
-
-	public void setAddressDetails(List<AddressDetail> addressDetails) {
-		this.addressDetails = addressDetails;
-	}
-
-	public AddressDetail addAddressDetail(AddressDetail addressDetail) {
-		getAddressDetails().add(addressDetail);
-		addressDetail.setPerson(this);
-
-		return addressDetail;
-	}
-
-	public AddressDetail removeAddressDetail(AddressDetail addressDetail) {
-		getAddressDetails().remove(addressDetail);
-		addressDetail.setPerson(null);
-
-		return addressDetail;
-	}
-
-	public List<Booking> getBookings() {
-		return this.bookings;
-	}
-
-	public void setBookings(List<Booking> bookings) {
-		this.bookings = bookings;
-	}
-
-	public Booking addBooking(Booking booking) {
-		getBookings().add(booking);
-		booking.setPerson(this);
-
-		return booking;
-	}
-
-	public Booking removeBooking(Booking booking) {
-		getBookings().remove(booking);
-		booking.setPerson(null);
-
-		return booking;
-	}
+	
 
 }

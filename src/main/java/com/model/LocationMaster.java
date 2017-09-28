@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -22,12 +22,10 @@ public class LocationMaster implements Serializable {
 	@Column(name="AIRPORT_NAME")
 	private String airportName;
 
-	@Column(name="CODE_")
 	private String code;
 
 	private String country;
 
-	@Column(name="NAME_")
 	private String name;
 
 	//bi-directional many-to-one association to FlightMaster
